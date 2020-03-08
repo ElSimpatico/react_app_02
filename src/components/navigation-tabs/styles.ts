@@ -25,12 +25,6 @@ export const useStyles = makeStyles((theme: Theme) =>
             }
         },
 
-        tabItem: {
-            marginLeft: '32px',
-            color: '#eb4e56',
-            cursor: 'pointer'
-        },
-
         tabPanelsWrapper: {
             color: 'white',
             backgroundColor: '#1d1b3b',

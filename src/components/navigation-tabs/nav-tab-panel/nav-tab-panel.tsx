@@ -1,8 +1,13 @@
 import React, { ReactElement } from 'react';
-import { TabProps } from './tab-props';
+import { NavTabPanelProps } from './nav-tab-panel-props';
 import { useStyles } from './styles';
 
-export function Tab({ full, show, onClose }: TabProps): ReactElement<{}> {
+export function NavTabPanel({
+    full,
+    show,
+    onClose,
+    children
+}: NavTabPanelProps): ReactElement<{}> {
     const classes = useStyles();
 
     return (
@@ -21,9 +26,7 @@ export function Tab({ full, show, onClose }: TabProps): ReactElement<{}> {
                     full ? classes.tabContentScroolFull : ''
                 }`}
             >
-                <div className={classes.tabContent}>
-                    <div>{'contenido'}</div>
-                </div>
+                <div className={classes.tabContent}>{children}</div>
             </div>
         </div>
     );
