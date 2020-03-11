@@ -18,14 +18,10 @@ export function NavTabPanel({
         >
             {full && (
                 <div className={classes.closeButton} onClick={onClose}>
-                    X
+                    <span className='icon-cross' />
                 </div>
             )}
-            <div
-                className={`${classes.tabContentScrool} ${
-                    full ? classes.tabContentScroolFull : ''
-                }`}
-            >
+            <div className={classes.tabContentScrool}>
                 <div className={classes.tabContent}>{children}</div>
             </div>
         </div>

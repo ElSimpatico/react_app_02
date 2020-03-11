@@ -1,28 +1,17 @@
 import { createStyles, makeStyles, Theme } from '@material-ui/core';
+import { COLOR_PALETTE } from '../../../styles';
 
 export const useStyles = makeStyles((theme: Theme) =>
     createStyles({
         tabPanel: {
-            height: '100%',
-            width: '100%'
+            height: '100%'
         },
 
         tabPanelFull: {
-            backgroundColor: '#1d1b3b',
             position: 'absolute',
             top: '0',
-            '@media (min-width: 320px)': {
-                height: 'calc(100% + 56px)'
-            },
-            '@media (min-width: 764px)': {
-                height: 'calc(100% + 72px)'
-            },
-            '@media (min-width: 1016px)': {
-                height: 'calc(100% + 72px)'
-            },
-            '@media (min-width: 1436px)': {
-                height: 'calc(100% + 96px)'
-            }
+            width: '100%',
+            backgroundColor: COLOR_PALETTE.SECONDARY
         },
 
         horizontalIn: {
@@ -32,23 +21,21 @@ export const useStyles = makeStyles((theme: Theme) =>
 
         horizontalOut: {
             transition: 'all 2s ease-in-out',
-            transform: 'translateX(-1000px)'
+            transform: 'translateX(-3000px)'
         },
 
         closeButton: {
+            position: 'absolute',
+            right: '0',
             width: '24px',
             height: '24px',
+            margin: '16px 16px 0 0',
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
-            position: 'absolute',
-            right: '0',
             cursor: 'pointer',
-            color: '#eb4e56',
-            zIndex: 1,
-            '@media (min-width: 320px)': {
-                margin: '16px 16px 0 0'
-            },
+            color: COLOR_PALETTE.RED,
+            fontSize: '30px',
             '@media (min-width: 764px)': {
                 margin: '31px 31px 0 0'
             },
@@ -62,6 +49,7 @@ export const useStyles = makeStyles((theme: Theme) =>
 
         tabContentScrool: {
             overflowY: 'auto',
+            overflowX: 'hidden',
             width: 'calc(100% - 6px)',
             height: '100%',
             '&::-webkit-scrollbar': {
@@ -69,33 +57,12 @@ export const useStyles = makeStyles((theme: Theme) =>
                 backgroundColor: 'transparent'
             },
             '&::-webkit-scrollbar-thumb': {
-                backgroundColor: '#363063'
-            }
-        },
-
-        tabContentScroolFull: {
-            width: 'calc(100% - 6px)',
-            position: 'absolute',
-            '@media (min-width: 320px)': {
-                top: '0',
-                height: 'calc(100% - 56px)'
-            },
-            '@media (min-width: 764px)': {
-                top: '112px',
-                height: 'calc(100% - 184px)'
-            },
-            '@media (min-width: 1016px)': {
-                top: '77px',
-                height: 'calc(100% - 149px)'
-            },
-            '@media (min-width: 1436px)': {
-                top: '97px',
-                height: 'calc(100% - 193px)'
+                backgroundColor: COLOR_PALETTE.PRIMARY
             }
         },
 
         tabContent: {
-            padding: '20px'
+            // TODO padding
         }
     })
 );
