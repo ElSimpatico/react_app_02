@@ -9,5 +9,10 @@ export const NAV_TABS: NavigationTab[] = [
     {
         title: i18next.t('common:faqs'),
         component: Content
+    },
+
+    {
+        title: i18next.t('common:contacts'),
+        component: Content
     }
 ];
