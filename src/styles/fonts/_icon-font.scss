@@ -1,0 +1,50 @@
+@font-face {
+    font-family: 'icomoon';
+    src: url('icon-library/icomoon.eot?1s7stg');
+    src: url('icon-library/icomoon.eot?1s7stg#iefix')
+            format('embedded-opentype'),
+        url('icon-library/icomoon.ttf?1s7stg') format('truetype'),
+        url('icon-library/icomoon.woff?1s7stg') format('woff'),
+        url('icon-library/icomoon.svg?1s7stg#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+[class^='icon-'],
+[class*=' icon-'] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-more:before {
+    content: '\e900';
+}
+.icon-circular-less:before {
+    content: '\e901';
+}
+.icon-less:before {
+    content: '\e902';
+}
+.icon-cross:before {
+    content: '\e903';
+}
+.icon-arrow-rigth:before {
+    content: '\e904';
+}
+.icon-circular-more:before {
+    content: '\e905';
+}
+.icon-arrow-left:before {
+    content: '\e906';
+}
