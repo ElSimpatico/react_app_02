@@ -1,21 +1,16 @@
 import React, { ReactElement } from 'react';
-import { useSelector } from 'react-redux';
-import { useTranslation } from 'react-i18next';
 
-import { useStyles } from './styles';
-import { State } from 'src/shared';
+import { Grid } from '@material-ui/core';
+import { NavigationTabs } from '../../components';
+import { NAV_TABS } from './constants/nav-tabs';
 
 export function Home(): ReactElement {
-    const classes = useStyles();
-    const [t] = useTranslation('common');
-
-    const { name } = useSelector((state: State) => state.test);
-
     return (
-        <div className={classes.wrapped}>
-            <div>{t('welcome-react')}</div>
-            <div>{'Home'}</div>
-            <div>{`Test name of redux state: ${name}`}</div>
-        </div>
+        <Grid container spacing={0}>
+            <Grid item xs={12} md={6}>
+                <NavigationTabs navTabs={NAV_TABS} />
+            </Grid>
+            <Grid item xs={12} md={6}></Grid>
+        </Grid>
     );
 }

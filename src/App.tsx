@@ -6,8 +6,10 @@ import { Route } from 'react-router';
 import { ROUTES, ApplicationRoute, PATHS } from './shared/routes';
 import { MuiThemeProvider, CssBaseline } from '@material-ui/core';
 
-import { theme } from './styles/theme';
+import { theme } from './styles';
 import { createReduxStore } from './shared/store';
+
+import './styles/fonts/global-fonts.scss';
 
 export function App(): ReactElement<{}> {
     return (

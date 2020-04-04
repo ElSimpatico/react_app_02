@@ -21,6 +21,20 @@ const commonConfiguration: Configuration = {
                 test: /.tsx?$/,
                 exclude: /node_modules/,
                 loader: 'awesome-typescript-loader'
+            },
+            {
+                test: /\.s?css$/,
+                use: ['style-loader', 'css-loader', 'sass-loader']
+            },
+            {
+                test: /\.(woff2|woff|eot|ttf|svg)$/,
+                use: {
+                    loader: 'file-loader',
+                    options: {
+                        name: 'styles/fonts/[folder]/[name].[ext]'
+                    }
+                },
+                include: [resolve(rootDir, 'styles/fonts')]
             }
         ]
     },
