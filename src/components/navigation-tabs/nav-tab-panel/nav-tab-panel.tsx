@@ -6,7 +6,7 @@ export function NavTabPanel({
     full,
     show,
     onClose,
-    children
+    children,
 }: NavTabPanelProps): ReactElement<{}> {
     const classes = useStyles();
 
@@ -22,7 +22,7 @@ export function NavTabPanel({
                 </div>
             )}
             <div className={classes.tabContentScrool}>
-                <div className={classes.tabContent}>{children}</div>
+                <div>{children}</div>
             </div>
         </div>
     );

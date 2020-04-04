@@ -7,10 +7,10 @@ import { NAV_TABS } from './constants/nav-tabs';
 export function Home(): ReactElement {
     return (
         <Grid container spacing={0}>
-            <Grid item xs={12} sm={6}>
+            <Grid item xs={12} md={6}>
                 <NavigationTabs navTabs={NAV_TABS} />
             </Grid>
-            <Grid item xs={12} sm={6}></Grid>
+            <Grid item xs={12} md={6}></Grid>
         </Grid>
     );
 }

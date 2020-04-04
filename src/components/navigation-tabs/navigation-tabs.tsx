@@ -7,8 +7,8 @@ import { NavTab } from './nav-tab/nav-tab';
 import { NavTabPanel } from './nav-tab-panel/nav-tab-panel';
 
 export function NavigationTabs({
-    navTabs
-}: NavigationTabProps): ReactElement<{}> {
+    navTabs,
+}: NavigationTabProps): ReactElement<NavigationTabProps> {
     const classes = useStyles();
 
     const [showTabs, setShowtabs] = useState(

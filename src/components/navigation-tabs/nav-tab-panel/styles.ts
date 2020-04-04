@@ -4,24 +4,24 @@ import { COLOR_PALETTE } from '../../../styles';
 export const useStyles = makeStyles((theme: Theme) =>
     createStyles({
         tabPanel: {
-            height: '100%'
+            height: '100%',
         },
 
         tabPanelFull: {
             position: 'absolute',
             top: '0',
             width: '100%',
-            backgroundColor: COLOR_PALETTE.SECONDARY
+            backgroundColor: COLOR_PALETTE.SECONDARY,
         },
 
         horizontalIn: {
             transition: 'all 2s ease-in-out',
-            transform: 'translateX(0)'
+            transform: 'translateX(0)',
         },
 
         horizontalOut: {
             transition: 'all 2s ease-in-out',
-            transform: 'translateX(-3000px)'
+            transform: 'translateX(-3000px)',
         },
 
         closeButton: {
@@ -37,14 +37,14 @@ export const useStyles = makeStyles((theme: Theme) =>
             color: COLOR_PALETTE.RED,
             fontSize: '30px',
             '@media (min-width: 764px)': {
-                margin: '31px 31px 0 0'
+                margin: '31px 31px 0 0',
             },
             '@media (min-width: 1016px)': {
-                margin: '25px 24px 0 0'
+                margin: '25px 24px 0 0',
             },
             '@media (min-width: 1436px)': {
-                margin: '32px 32px 0 0'
-            }
+                margin: '32px 32px 0 0',
+            },
         },
 
         tabContentScrool: {
@@ -54,15 +54,11 @@ export const useStyles = makeStyles((theme: Theme) =>
             height: '100%',
             '&::-webkit-scrollbar': {
                 width: '4px',
-                backgroundColor: 'transparent'
+                backgroundColor: 'transparent',
             },
             '&::-webkit-scrollbar-thumb': {
-                backgroundColor: COLOR_PALETTE.PRIMARY
-            }
+                backgroundColor: COLOR_PALETTE.PRIMARY,
+            },
         },
-
-        tabContent: {
-            // TODO padding
-        }
     })
 );
